@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="edit products page for Allez" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/147782ce63.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="css/styles.css" rel="stylesheet" />
+    <title>Edit form | Allez</title>
+  </head>
+  <header class="header">
+    <div class="container__logo">
+      <a href="index.html" class="logo__link">
+        <img src="/images/allezLogoBlack.png" class="logo__img" />
+        <p class="logo__name"><b>Allez</b></p>
+      </a>
+    </div>
+    <nav class="nav__primary">
+      <ul class="nav__ul">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li class="nav__admin"></li>
+      </ul>
+    </nav>
+    <nav class="nav__secondary">
+      <ul class="nav__ul">
+        <li class="nav__ul--login"></li>
+        <li>
+          <a href="shoppingCart.html"
+            ><i class="fa-solid fa-cart-shopping"></i
+          ></a>
+        </li>
+      </ul>
+      <button class="dropdown__btn"><i class="fa-solid fa-bars"></i></button>
+    </nav>
+    <nav class="nav__dropdown">
+      <ul class="nav__ul--dropdown">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li class="nav__dropdown--admin"></li>
+        <div class="nav__dropdown--section">
+          <li>
+            <a href="shoppingCart.html"
+              ><i class="fa-solid fa-cart-shopping"></i
+            ></a>
+          </li>
+          <li class="nav__dropdown--login"></li>
+        </div>
+      </ul>
+    </nav>
+  </header>
+  <body>
+    <h1 class="dashboard__title">Admin Dashboard</h1>
+    <nav class="nav__dashboard">
+      <ul class="nav__dashboard--ul">
+        <li><a href="add.html">Add product</a></li>
+        <span class="nav__list--divider">|</span>
+        <li><a href="edit.html" class="active">Edit product</a></li>
+      </ul>
+    </nav>
+    <main class="form__container form__container--edit">
+      <form class="form__login form__add form__edit">
+        <h2>Edit product</h2>
+        <div>
+          <label for="Title">Title</label>
+          <input type="text" id="title" />
+        </div>
+        <div>
+          <label for="price">Price</label>
+          <input type="number" id="price" />
+        </div>
+        <div>
+          <label for="description">Description</label>
+          <textarea id="description"></textarea>
+        </div>
+        <div class="form__element--line">
+          <label for="featured__checkbox" id="label__checkbox">Featured</label>
+          <input
+            type="checkbox"
+            id="featured__checkbox"
+            value="false"
+            name="featured"
+          />
+        </div>
+        <div>
+          <label for="image">Upload/change image</label>
+          <input type="file" id="imageFile" />
+        </div>
+        <div>
+          <input id="id" type="hidden" />
+        </div>
+        <button class="product__btn form__login--btn">Update</button>
+        <div class="container__delete"></div>
+        <div class="container__message"></div>
+      </form>
+    </main>
+    <script src="js/components/common/mobileMenu.js" type="module"></script>
+    <script src="/js/admin/edit.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+.content__cart {
+  border-bottom: 2px solid map-get($colors, ctaSecondary);
+  margin-bottom: 10px;
+}
+
+.container__cart,
+.container__price {
+  max-width: 600px;
+  margin: 1rem auto;
+  padding: 10px;
+}
+
+.cart__img {
+  max-width: 150px;
+  min-height: 150px;
+  object-fit: cover;
+}
