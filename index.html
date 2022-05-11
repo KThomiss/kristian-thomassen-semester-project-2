@@ -30,8 +30,8 @@
       </div>
       <nav class="nav__primary">
         <ul class="nav__ul">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="products.html">Products</a></li>
+          <li><a href="index.html" class="nav__hover active">Home</a></li>
+          <li><a href="products.html" class="nav__hover">Products</a></li>
           <li class="nav__admin"></li>
         </ul>
       </nav>
@@ -48,8 +48,10 @@
       </nav>
       <nav class="nav__dropdown">
         <ul class="nav__ul--dropdown">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="products.html">Products</a></li>
+          <li><a href="index.html" class="active nav__hover">Home</a></li>
+          <li>
+            <a href="products.html" class="nav__hover">Products</a>
+          </li>
           <li class="nav__dropdown--admin"></li>
           <div class="nav__dropdown--section">
             <li>
@@ -77,6 +79,18 @@
         <div class="loading__indicator"></div>
       </div>
     </main>
+    <footer>
+      <div class="footer__copyright">
+        <p class="footer__copyright--p">
+          Copyright &copy; Kristian Thomassen 2022, all rights reserved.
+        </p>
+      </div>
+      <div class="footer__links">
+        <a href="#">Terms and Conditions</a>
+        <a href="#">Privacy policy</a>
+        <a href="#">FAQ</a>
+      </div>
+    </footer>
     <script src="js/index.js" type="module"></script>
     <script src="js/components/common/mobileMenu.js" type="module"></script>
     <script src="js/components/fetchFeatured.js" type="module"></script>

@@ -16,7 +16,7 @@ export default function createMenu() {
     authLink = `<span class="username__span">Hi ${username}!</span>
                 <a class="signOut">Logout</a>`;
 
-    authAdmin = `<a href="dashboard.html" class="${
+    authAdmin = `<a href="dashboard.html" class="nav__hover ${
       pathname === "/dashboard.html" ? "active" : ""
     }">Dashboard</a>`;
   }

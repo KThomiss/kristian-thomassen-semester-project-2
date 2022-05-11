@@ -25,8 +25,8 @@
     </div>
     <nav class="nav__primary">
       <ul class="nav__ul">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="products.html">Products</a></li>
+        <li><a href="index.html" class="nav__hover">Home</a></li>
+        <li><a href="products.html" class="nav__hover">Products</a></li>
         <li class="nav__admin"></li>
       </ul>
     </nav>
@@ -43,8 +43,8 @@
     </nav>
     <nav class="nav__dropdown">
       <ul class="nav__ul--dropdown">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="products.html">Products</a></li>
+        <li><a href="index.html" class="nav__hover">Home</a></li>
+        <li><a href="products.html" class="nav__hover">Products</a></li>
         <li class="nav__dropdown--admin"></li>
         <div class="nav__dropdown--section">
           <li>
@@ -62,13 +62,27 @@
       <h1 class="dashboard__title">Admin Dashboard</h1>
       <nav class="nav__dashboard">
         <ul class="nav__dashboard--ul">
-          <li><a href="add.html">Add products</a></li>
+          <li><a href="add.html" class="nav__hover">Add products</a></li>
           <span class="nav__list--divider">|</span>
-          <li><a href="edit.html" class="active">Edit products</a></li>
+          <li>
+            <a href="edit.html" class="active nav__hover">Edit products</a>
+          </li>
         </ul>
       </nav>
       <div class="container__edit"></div>
     </main>
+    <footer>
+      <div class="footer__copyright">
+        <p class="footer__copyright--p">
+          Copyright &copy; Kristian Thomassen 2022, all rights reserved.
+        </p>
+      </div>
+      <div class="footer__links">
+        <a href="#">Terms and Conditions</a>
+        <a href="#">Privacy policy</a>
+        <a href="#">FAQ</a>
+      </div>
+    </footer>
     <script src="js/components/common/mobileMenu.js" type="module"></script>
     <script src="/js/admin/fetchEdit.js" type="module"></script>
   </body>
