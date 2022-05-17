@@ -28,7 +28,7 @@ async function getProductId() {
                                     <p class="details__description">${json.description}</p>
                                     <p><span class="details__span--bold">Price:</span> ${json.price} $</p>
                                     <div class="details__container--cta">
-                                      <button class="cta details__cta" id="cart__btn" data-id="${json.id}" data-title="${json.title}" data-price="${json.price}" data-img="http://localhost:1337${json.image.formats.small.url}">Add to cart</button>
+                                      <button class="cta details__cta" id="cart__btn" data-id="${json.id}" data-title="${json.title}" data-price="${json.price}" data-img="http://localhost:1337${json.image.formats.small.url}">Add to Cart</button>
                                       <a href="shoppingCart.html" class="product__btn cta details__cta">Cart</a>
                                     </div>
                                   </div>
@@ -37,18 +37,34 @@ async function getProductId() {
   document.title = `${json.title} | Allez`;
 
   const addToCartBtn = document.querySelector("#cart__btn");
+  const shoppingCart = getFromCart();
 
-  /*   addToCartBtn.addEventListener("click", function () {
-    const shoppingCart = getFromCart();
+  const findInCart = shoppingCart.find(function (product) {
+    return parseInt(product.id) === json.id;
+  });
 
-    const findInCart = shoppingCart.find(function (product) {
-      return parseInt(product.id) === json.id;
-    });
+  if (!findInCart) {
+    addToCartBtn.classList.add("addToCart");
+    addToCartBtn.innerHTML = "Add to cart";
+    addToCartBtn.style.backgroundColor = "#f26e50";
+  } else {
+    addToCartBtn.classList.add("removeFromCart");
+    addToCartBtn.innerHTML = "Remove from cart";
+    addToCartBtn.style.backgroundColor = "#fc615f";
+  }
 
-    if (findInCart) {
+  addToCartBtn.addEventListener("click", function () {
+    this.classList.toggle("removeFromCart");
+    this.classList.toggle("addToCart");
+
+    if (addToCartBtn.classList.contains("addToCart")) {
+      addToCartBtn.innerHTML = "Add to cart";
+      addToCartBtn.style.backgroundColor = "#f26e50";
+    } else {
       addToCartBtn.innerHTML = "Remove from cart";
-    } 
-  }); */
+      addToCartBtn.style.backgroundColor = "#fc615f";
+    }
+  });
 
   addToCartBtn.addEventListener("click", handleStorage);
 }

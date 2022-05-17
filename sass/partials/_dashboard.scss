@@ -26,3 +26,9 @@
   background-color: map-get($colors, header);
   border: $border;
 }
+
+.edit__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

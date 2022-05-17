@@ -10,6 +10,9 @@
 
 .content__product {
   max-width: 500px;
+}
+
+.content__product:hover {
   box-shadow: $boxShadow;
 }
 
@@ -35,6 +38,7 @@
   object-fit: cover;
   object-position: center;
   border-bottom: 2px solid map-get($colors, ctaSecondary);
+  border-radius: 6px 6px 0 0;
 }
 
 .product__info--price {

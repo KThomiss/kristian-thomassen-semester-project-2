@@ -26,6 +26,7 @@
 .details__img {
   border-right: 2px solid map-get($colors, ctaSecondary);
   border-bottom: none;
+  border-radius: 0;
 }
 
 .details__container--img,
