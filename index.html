@@ -39,12 +39,14 @@
         <ul class="nav__ul">
           <li class="nav__ul--login"></li>
           <li>
-            <a href="shoppingCart.html"
+            <a href="shoppingCart.html" aria-label="Go to shopping cart"
               ><i class="fa-solid fa-cart-shopping"></i
             ></a>
           </li>
         </ul>
-        <button class="dropdown__btn"><i class="fa-solid fa-bars"></i></button>
+        <button class="dropdown__btn" aria-label="icon for dropdown menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </nav>
       <nav class="nav__dropdown">
         <ul class="nav__ul--dropdown">
@@ -55,7 +57,7 @@
           <li class="nav__dropdown--admin"></li>
           <div class="nav__dropdown--section">
             <li>
-              <a href="shoppingCart.html"
+              <a href="shoppingCart.html" aria-label="Go to shopping cart"
                 ><i class="fa-solid fa-cart-shopping"></i
               ></a>
             </li>
@@ -69,12 +71,26 @@
         <div class="container__hero--img">
           <div class="container__hero--text">
             <h1 class="hero__title">Feel the comfort</h1>
-            <h3 class="hero__info">Take a look at our products below</h3>
+            <h2 class="hero__info">Take a look at our products below</h2>
             <a href="products.html" class="cta hero__cta">Shop</a>
           </div>
         </div>
       </div>
-      <h2 class="featured__products--title">Feautured Products</h2>
+      <div class="container__info">
+        <div class="info__child">
+          <i class="fa-solid fa-truck-fast"></i>
+          <p>Free Shipping</p>
+        </div>
+        <div class="info__child">
+          <i class="fa-solid fa-handshake"></i>
+          <p>Secure Payment</p>
+        </div>
+        <div class="info__child">
+          <i class="fa-solid fa-headphones"></i>
+          <p>24/7 Support</p>
+        </div>
+      </div>
+      <h3 class="featured__products--title">Feautured Products</h3>
       <div class="container__featured">
         <div class="loading__indicator"></div>
       </div>

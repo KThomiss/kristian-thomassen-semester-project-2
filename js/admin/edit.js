@@ -17,7 +17,7 @@ const title = document.querySelector("#title");
 const price = document.querySelector("#price");
 const description = document.querySelector("#description");
 const featured = document.querySelector("#featured__checkbox");
-/* const image = document.querySelector("#image"); */
+const imageFile = document.querySelector("#imageFile");
 const idInput = document.querySelector("#id");
 const message = document.querySelector(".container__message");
 
@@ -49,11 +49,7 @@ function submitForm(event) {
   const priceValue = parseFloat(price.value);
   const descriptionValue = description.value.trim();
   const idValue = idInput.value;
-  let featuredValue = featured.value;
-
-  if (featured.checked) {
-    featuredValue = "true";
-  }
+  const featuredValue = featured.checked;
 
   if (
     titleValue.length === 0 ||
@@ -79,21 +75,29 @@ function submitForm(event) {
 
 async function updateProduct(title, price, description, featured, id) {
   const putUrl = apiUrl + "products/" + id;
+  const formData = new FormData();
+  const file = imageFile.files[0];
 
-  const data = JSON.stringify({
+  if (imageFile.files.length === 0) {
+    return alert("Please select an image");
+  }
+
+  const data = {
     title: title,
     price: price,
     description: description,
     featured: featured,
-  });
+  };
+
+  formData.append("files.image", file, file.name);
+  formData.append("data", JSON.stringify(data));
 
   const token = getToken();
 
   const options = {
     method: "PUT",
-    body: data,
+    body: formData,
     headers: {
-      "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
     },
   };
@@ -104,7 +108,7 @@ async function updateProduct(title, price, description, featured, id) {
 
     if (json.updated_at) {
       displayMessage("success", "Product updated", ".container__message");
-      form.reset();
+      location.href = "/edit.html";
     }
 
     if (json.error) {

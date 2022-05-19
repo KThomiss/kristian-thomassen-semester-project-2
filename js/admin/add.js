@@ -23,11 +23,7 @@ function submitForm(event) {
   const titleValue = title.value.trim();
   const priceValue = parseFloat(price.value);
   const descriptionValue = description.value.trim();
-  let featuredValue = featured.value;
-
-  if (featured.checked) {
-    featuredValue = "true";
-  }
+  const featuredValue = featured.checked;
 
   if (
     titleValue.lengt === 0 ||
@@ -82,7 +78,7 @@ async function addProduct(title, price, description, featured) {
 
     if (json.created_at) {
       displayMessage("success", "Product created", ".container__message");
-      form.reset();
+      /* form.reset(); */
     }
 
     if (json.error) {

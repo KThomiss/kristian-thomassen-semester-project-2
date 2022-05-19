@@ -49,33 +49,39 @@ a {
 
 .cta {
   background-color: map-get($colors, ctaPrimary);
-  padding: 5px;
-  border-radius: 6px;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  border-radius: 2px;
   border: none;
   text-align: center;
   display: inline-block;
   font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.hero__cta {
+  padding-right: 25px;
+  padding-left: 25px;
+  font-size: 1rem;
 }
 
 .product__btn {
   background-color: map-get($colors, ctaSecondary);
-  cursor: pointer;
-  border: none;
-  display: inline-block;
 }
 
 input[type="checkbox"] {
   cursor: pointer;
 }
 
-.active {
+.active,
+i.active {
   color: map-get($colors, activeLink);
 }
 
 .product__details--title,
-.cart__title {
-  border-bottom: 1px solid map-get($colors, header);
-  margin-bottom: 0;
+.cart__title,
+.products__title {
+  border-bottom: $header-border;
 }
 
 .product__btn:hover {

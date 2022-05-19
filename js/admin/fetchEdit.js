@@ -23,7 +23,7 @@ function editProducts(products) {
     productsContainer.innerHTML += `<div class="container__products--edit">
                                       <p class="edit__id">Id: ${product.id}</p>
                                       <p class="edit__title">${product.title}</p>
-                                      <a href="editForm.html?id=${product.id}" class="edit__link"><i class="fa-solid fa-pen-to-square"></i></a>
+                                      <a href="editForm.html?id=${product.id}" class="edit__link" aria-label="icon for editing product"><i class="fa-solid fa-pen-to-square"></i></a>
                                     </div>`;
   });
 }

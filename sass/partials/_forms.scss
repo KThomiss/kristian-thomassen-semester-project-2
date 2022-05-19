@@ -36,7 +36,7 @@ textarea {
   padding: 10px 3px;
   width: 100%;
   border: 1px solid lightgray;
-  border-radius: 6px;
+  border-radius: 2px;
 }
 
 .form__login > * {
@@ -44,9 +44,6 @@ textarea {
 }
 
 .form__login--btn {
-  padding: 10px 0;
-  margin: 0;
-  border-radius: 6px;
   width: 100%;
 }
 
@@ -67,6 +64,10 @@ textarea {
 
 .form__search--label {
   text-align: center;
+}
+
+.form__new--btn {
+  display: none;
 }
 
 @media (max-width: 450px) {

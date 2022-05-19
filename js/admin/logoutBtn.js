@@ -1,5 +1,3 @@
-import { clearStorage } from "../storage/storage.js";
-
 export function logoutBtn() {
   const btnLogout = document.querySelectorAll(".signOut");
 
@@ -9,7 +7,8 @@ export function logoutBtn() {
         const doLogout = confirm("Do you wish to continue?");
 
         if (doLogout) {
-          clearStorage();
+          localStorage.removeItem("token");
+          localStorage.removeItem("user");
           location.href = "/";
         }
       };

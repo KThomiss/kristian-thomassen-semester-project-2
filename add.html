@@ -19,7 +19,11 @@
   <header class="header">
     <div class="container__logo">
       <a href="index.html" class="logo__link">
-        <img src="/images/allezLogoBlack.png" class="logo__img" />
+        <img
+          src="/images/allezLogoBlack.png"
+          class="logo__img"
+          alt="The letter A"
+        />
         <p class="logo__name"><b>Allez</b></p>
       </a>
     </div>
@@ -34,12 +38,14 @@
       <ul class="nav__ul">
         <li class="nav__ul--login"></li>
         <li>
-          <a href="shoppingCart.html"
+          <a href="shoppingCart.html" aria-label="Go to shopping cart"
             ><i class="fa-solid fa-cart-shopping"></i
           ></a>
         </li>
       </ul>
-      <button class="dropdown__btn"><i class="fa-solid fa-bars"></i></button>
+      <button class="dropdown__btn" aria-label="icon for dropdown menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </nav>
     <nav class="nav__dropdown">
       <ul class="nav__ul--dropdown">
@@ -48,7 +54,7 @@
         <li class="nav__dropdown--admin"></li>
         <div class="nav__dropdown--section">
           <li>
-            <a href="shoppingCart.html"
+            <a href="shoppingCart.html" aria-label="Go to shopping cart"
               ><i class="fa-solid fa-cart-shopping"></i
             ></a>
           </li>
@@ -62,7 +68,7 @@
     <nav class="nav__dashboard">
       <ul class="nav__dashboard--ul">
         <li><a href="add.html" class="active nav__hover">Add product</a></li>
-        <span class="nav__list--divider">|</span>
+        <li><span class="nav__list--divider">|</span></li>
         <li><a href="edit.html" class="nav__hover">Edit product</a></li>
       </ul>
     </nav>
@@ -83,19 +89,14 @@
         </div>
         <div class="form__element--line">
           <label for="featured__checkbox" id="label__checkbox">Featured</label>
-          <input
-            type="checkbox"
-            id="featured__checkbox"
-            value="false"
-            name="featured"
-          />
+          <input type="checkbox" id="featured__checkbox" name="featured" />
         </div>
         <div>
-          <label for="image">Upload image</label>
+          <label for="imageFile">Upload image</label>
           <input type="file" id="imageFile" />
         </div>
         <div>
-          <button class="product__btn form__login--btn">Add</button>
+          <button class="product__btn form__login--btn cta">Add Product</button>
         </div>
         <div class="container__message"></div>
       </form>
