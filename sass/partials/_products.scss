@@ -19,7 +19,7 @@
 .product__featured,
 .content__product {
   max-height: 800px;
-  border-radius: 6px;
+  border-radius: $border-radius;
   background-color: whitesmoke;
   border: $border;
 }
@@ -38,7 +38,6 @@
   object-fit: cover;
   object-position: center;
   border-bottom: 2px solid map-get($colors, ctaSecondary);
-  border-radius: 6px 6px 0 0;
 }
 
 .product__info--price {

@@ -5,10 +5,10 @@ createMenu();
 
 const clearAllBtn = document.querySelector(".cart__clearAll");
 const priceContainer = document.querySelector(".container__price");
+const cartContainer = document.querySelector(".container__cart");
 
 function fetchCart() {
   const shoppingCart = getFromCart();
-  const cartContainer = document.querySelector(".container__cart");
 
   cartContainer.innerHTML = "";
 
@@ -73,8 +73,7 @@ function removeProduct() {
 }
 
 clearAllBtn.addEventListener("click", function () {
-  localStorage.clear();
-  getFromCart([]);
+  localStorage.removeItem("shopCart");
   clearAllBtn.style.display = "none";
   cartContainer.innerHTML = `<div class="message">No favorites selected<div>`;
   priceContainer.innerHTML = "";

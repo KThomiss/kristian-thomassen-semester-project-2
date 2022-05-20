@@ -81,11 +81,11 @@
         </div>
         <div>
           <label for="price">Price</label>
-          <input type="number" id="price" />
+          <input type="number" id="price" step="any" />
         </div>
         <div>
           <label for="description">Description</label>
-          <textarea id="description"></textarea>
+          <textarea id="description" rows="8"></textarea>
         </div>
         <div class="form__element--line">
           <label for="featured__checkbox" id="label__checkbox">Featured</label>
@@ -99,7 +99,7 @@
           <input id="id" type="hidden" />
         </div>
         <button class="product__btn form__login--btn cta">Update</button>
-        <div class="container__delete"></div>
+        <button class="form__login--btn form__delete--btn cta">Delete</button>
         <div class="container__message"></div>
       </form>
     </main>

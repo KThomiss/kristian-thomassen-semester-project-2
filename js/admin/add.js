@@ -76,6 +76,8 @@ async function addProduct(title, price, description, featured) {
     const response = await fetch(adminUrl, options);
     const json = await response.json();
 
+    console.log(json);
+
     if (json.created_at) {
       displayMessage("success", "Product created", ".container__message");
       /* form.reset(); */
@@ -85,7 +87,7 @@ async function addProduct(title, price, description, featured) {
       displayMessage("error", json.message, ".container__message");
     }
   } catch (error) {
-    console.log(error);
     displayMessage("error", "An error occured", ".container__message");
+    console.log(error);
   }
 }

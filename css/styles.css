@@ -10,7 +10,7 @@ h1,
 
 .message {
   width: 100%;
-  border-radius: 6px;
+  border-radius: 2px;
   background-color: white;
   padding: 10px;
   text-align: center;
@@ -333,7 +333,7 @@ i.active {
 }
 
 .container__hero {
-  background-color: #e8e8e8;
+  background-color: #a0a0a0;
   text-transform: uppercase;
 }
 
@@ -390,7 +390,7 @@ i.active {
 
 .container__info {
   max-width: 1080px;
-  border-radius: 6px;
+  border-radius: 2px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -457,7 +457,7 @@ i.active {
 .product__featured,
 .content__product {
   max-height: 800px;
-  border-radius: 6px;
+  border-radius: 2px;
   background-color: whitesmoke;
   border: 1px solid #e9e7e7;
 }
@@ -478,7 +478,6 @@ i.active {
   -o-object-position: center;
      object-position: center;
   border-bottom: 2px solid #68a9c2;
-  border-radius: 6px 6px 0 0;
 }
 
 .product__info--price {
