@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Admin page for Allez" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Rubik&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/147782ce63.js" crossorigin="anonymous"></script>
+    <link href="css/styles.css" rel="stylesheet" />
+    <title>Add products | Allez</title>
+  </head>
+  <header class="header">
+    <div class="container__logo">
+      <a href="index.html" class="logo__link">
+        <img src="/images/allezLogoBlack.png" class="logo__img" alt="The letter A" />
+        <p class="logo__name"><b>Allez</b></p>
+      </a>
+    </div>
+    <nav class="nav__primary">
+      <ul class="nav__ul">
+        <li><a href="index.html" class="nav__hover">Home</a></li>
+        <li><a href="products.html" class="nav__hover">Products</a></li>
+        <li class="nav__admin"></li>
+      </ul>
+    </nav>
+    <nav class="nav__secondary">
+      <ul class="nav__ul">
+        <li class="nav__ul--login"></li>
+        <li>
+          <a href="shoppingCart.html" aria-label="Go to shopping cart"><i class="fa-solid fa-cart-shopping"></i></a>
+        </li>
+      </ul>
+      <button class="dropdown__btn" aria-label="icon for dropdown menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </nav>
+    <nav class="nav__dropdown">
+      <ul class="nav__ul--dropdown">
+        <li><a href="index.html" class="nav__hover">Home</a></li>
+        <li><a href="products.html" class="nav__hover">Products</a></li>
+        <li class="nav__dropdown--admin"></li>
+        <div class="nav__dropdown--section">
+          <li>
+            <a href="shoppingCart.html" aria-label="Go to shopping cart"><i class="fa-solid fa-cart-shopping"></i></a>
+          </li>
+          <li class="nav__dropdown--login"></li>
+        </div>
+      </ul>
+    </nav>
+  </header>
+  <body>
+    <h1 class="dashboard__title">Admin Dashboard</h1>
+    <nav class="nav__dashboard">
+      <ul class="nav__dashboard--ul">
+        <li><a href="add.html" class="active nav__hover">Add product</a></li>
+        <span class="nav__list--divider">|</span>
+        <li><a href="edit.html" class="nav__hover">Edit product</a></li>
+      </ul>
+    </nav>
+    <main class="form__container form__container--add">
+      <form class="form__login form__add">
+        <h2>Add product</h2>
+        <div>
+          <label for="title">Title</label>
+          <input type="text" id="title" />
+        </div>
+        <div>
+          <label for="price">Price</label>
+          <input type="number" id="price" step="any" />
+        </div>
+        <div>
+          <label for="description">Description</label>
+          <textarea id="description" rows="8"></textarea>
+        </div>
+        <div class="form__element--line">
+          <label for="featured__checkbox" id="label__checkbox">Featured</label>
+          <input type="checkbox" id="featured__checkbox" name="featured" />
+        </div>
+        <div>
+          <label for="imageFile">Upload image</label>
+          <input type="file" id="imageFile" />
+        </div>
+        <div>
+          <button class="product__btn form__login--btn cta">Add Product</button>
+        </div>
+        <div class="container__message"></div>
+      </form>
+    </main>
+    <footer>
+      <div class="footer__copyright">
+        <p class="footer__copyright--p">Copyright &copy; Kristian Thomassen 2022, all rights reserved.</p>
+      </div>
+      <div class="footer__links">
+        <a href="#">Terms and Conditions</a>
+        <a href="#">Privacy policy</a>
+        <a href="#">FAQ</a>
+      </div>
+    </footer>
+    <script src="js/components/common/mobileMenu.js" type="module"></script>
+    <script src="/js/admin/add.js" type="module"></script>
+  </body>
+</html>

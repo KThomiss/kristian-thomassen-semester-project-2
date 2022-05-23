@@ -1,0 +1,67 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: map-get($colors, header);
+  border-bottom: 1px solid #a8a8a8;
+}
+
+.logo__link,
+.nav__primary,
+.nav__secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .logo__img {
+    margin: 10px 0px 10px 10px;
+  }
+
+  .logo__name {
+    margin-bottom: 10px;
+    margin-top: auto;
+    text-transform: uppercase;
+    line-height: 0.7;
+  }
+}
+
+.nav__ul {
+  display: flex;
+
+  li {
+    margin: 1rem;
+  }
+}
+
+.logo__img {
+  max-width: 60px;
+  height: 34px;
+  aspect-ratio: 16 / 9;
+}
+
+.nav__hover:hover {
+  color: map-get($colors, activeLink);
+}
+
+.username__span {
+  color: map-get($colors, username);
+}
+
+.signOut {
+  margin-left: 5px;
+  font-size: 0.625rem;
+  color: #363636;
+}
+
+.signOut:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+.fa-bars,
+.fa-cart-shopping {
+  font-size: 1.1rem;
+}
+
+.fa-cart-shopping {
+  color: #535353;
+}

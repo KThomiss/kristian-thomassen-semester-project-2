@@ -1,0 +1,39 @@
+footer {
+  background-color: map-get($colors, header);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-shrink: 0;
+  border-top: 1px solid #a8a8a8;
+}
+
+.footer__copyright {
+  p {
+    padding: 10px;
+    font-size: 0.8rem;
+    color: #666666;
+  }
+}
+
+.footer__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    padding: 10px;
+    font-size: 0.8rem;
+    color: #666666;
+  }
+}
+
+.body__sticky {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__sticky--wrapper {
+  flex: 1 0 auto;
+}
