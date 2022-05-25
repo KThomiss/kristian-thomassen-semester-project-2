@@ -62,3 +62,8 @@ email: admin@admin.com
 username: admin
 password: Pass1234
 */
+
+/*allez@allez.com
+username: allez
+password Allez1234
+*/
