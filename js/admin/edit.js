@@ -27,11 +27,11 @@ const featuredMessage = document.querySelector(".product__isFeatured");
     const response = await fetch(queryUrl);
     const details = await response.json();
 
-    title.value = details.title;
-    price.value = details.price;
-    description.value = details.description;
-    featured.value = details.featured;
-    idInput.value = details.id;
+    title.value = details.data.attributes.title;
+    price.value = details.data.attributes.price;
+    description.value = details.data.attributes.description;
+    featured.value = details.data.attributes.featured;
+    idInput.value = details.data.id;
 
     featured.addEventListener("click", function () {
       if (featured.value === "true") {
@@ -39,7 +39,7 @@ const featuredMessage = document.querySelector(".product__isFeatured");
       }
     });
 
-    deleteBtn(details.id);
+    deleteBtn(details.data.id);
   } catch (error) {
     console.log(error);
   }
@@ -93,8 +93,9 @@ async function updateProduct(title, price, description, featured, id) {
   try {
     const response = await fetch(putUrl, options);
     const json = await response.json();
+    console.log(json);
 
-    if (json.updated_at) {
+    if (json.data.attributes.updated_at) {
       displayMessage("success", "Product updated", ".container__message");
     }
 

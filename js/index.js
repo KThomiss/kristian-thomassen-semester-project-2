@@ -12,7 +12,9 @@ async function getHeroBanner() {
     const response = await fetch(heroBanner);
     const json = await response.json();
 
-    heroContainer.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(http://localhost:1337${json.hero_banner.url})`;
+    console.log(json);
+
+    heroContainer.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${json.data.attributes.hero_image_url})`;
   } catch (error) {
     console.log(error);
   }
