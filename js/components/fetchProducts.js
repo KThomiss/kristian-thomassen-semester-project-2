@@ -6,13 +6,9 @@ createMenu();
 
 const products = apiUrl + "products/";
 
-const proxy = "https://noroffcors.herokuapp.com/";
-
-const corsFix = proxy + products;
-
 (async function () {
   try {
-    const response = await fetch(corsFix);
+    const response = await fetch(products);
     const json = await response.json();
 
     fetchProducts(json);

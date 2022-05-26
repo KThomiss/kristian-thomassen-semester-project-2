@@ -19,8 +19,6 @@ function fetchFeatured(featured) {
   featuredContainer.innerHTML = "";
 
   for (let i = 0; i < featured.data.length; i++) {
-    console.log(featured.data[i].attributes.title);
-
     if (featured.data[i].attributes.featured === true) {
       featuredContainer.innerHTML += `<div class="content__product product__featured">
                                         <a href="prodDetails.html?id=${featured.data[i].id}">

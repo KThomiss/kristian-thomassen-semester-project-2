@@ -12,8 +12,6 @@ async function getHeroBanner() {
     const response = await fetch(heroBanner);
     const json = await response.json();
 
-    console.log(json);
-
     heroContainer.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${json.data.attributes.hero_image_url})`;
   } catch (error) {
     console.log(error);

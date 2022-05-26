@@ -7,8 +7,10 @@ export function searchFilter(products) {
   function inputValue(event) {
     const inputValue = event.target.value.trim().toLowerCase();
 
-    const filteredProducts = products.filter(function (item) {
-      if (item.title.trim().toLowerCase().includes(inputValue)) {
+    const prodArray = products.data;
+
+    const filteredProducts = prodArray.filter(function (search) {
+      if (search.attributes.title.trim().toLowerCase().includes(inputValue)) {
         return true;
       }
     });
