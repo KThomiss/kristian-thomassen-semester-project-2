@@ -76,6 +76,6 @@ function removeProduct() {
 clearAllBtn.addEventListener("click", function () {
   localStorage.removeItem("shopCart");
   clearAllBtn.style.display = "none";
-  cartContainer.innerHTML = `<div class="message">No favorites selected<div>`;
+  cartContainer.innerHTML = `<div class="message">Your shopping cart is empty.<div>`;
   priceContainer.innerHTML = "";
 });
