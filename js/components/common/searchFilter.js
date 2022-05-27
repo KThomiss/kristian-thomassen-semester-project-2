@@ -1,4 +1,4 @@
-import { fetchProducts } from "../fetchProducts.js";
+import { createProducts } from "../createProducts.js";
 
 export function searchFilter(products) {
   const filterInput = document.querySelector("#search");
@@ -11,7 +11,7 @@ export function searchFilter(products) {
         return true;
       }
     });
-    fetchProducts(filteredProducts);
+    createProducts(filteredProducts);
   }
   filterInput.addEventListener("keyup", inputValue);
 }
