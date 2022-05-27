@@ -11,8 +11,8 @@ const products = apiUrl + "products/";
     const response = await fetch(products);
     const json = await response.json();
 
-    fetchProducts(json);
-    searchFilter(json);
+    fetchProducts(json.data);
+    searchFilter(json.data);
   } catch (error) {
     console.log(error);
   }
@@ -21,55 +21,22 @@ const products = apiUrl + "products/";
 export function fetchProducts(products) {
   const productsContainer = document.querySelector(".container__products");
 
-  productsContainer.innerHTML = "";
-
-  const productsArray = products.data;
-
-  if (productsArray === undefined) {
-    return false;
+  if (products.length === 0) {
+    return (productsContainer.innerHTML = `<div class="message">No results</div>`);
   }
 
-  for (let i = 0; i < productsArray.length; i++) {
+  productsContainer.innerHTML = "";
+
+  for (let i = 0; i < products.length; i++) {
     productsContainer.innerHTML += `<div class="content__product product__list">
-                                      <a href="prodDetails.html?id=${products.data[i].id}">
-                                        <img src=${products.data[i].attributes.image_url} class="product__img" alt="#" />
+                                      <a href="prodDetails.html?id=${products[i].id}">
+                                        <img src=${products[i].attributes.image_url} class="product__img" alt="#" />
                                       </a>   
                                       <div class="product__info">
-                                        <h3 class="product__info--title">${products.data[i].attributes.title}</h3>
-                                        <p class="product__info--price">${products.data[i].attributes.price} $</p>
-                                        <a href="prodDetails.html?id=${products.data[i].id}" class="product__btn cta">Shop now</a>
+                                        <h3 class="product__info--title">${products[i].attributes.title}</h3>
+                                        <p class="product__info--price">${products[i].attributes.price} $</p>
+                                        <a href="prodDetails.html?id=${products[i].id}" class="product__btn cta">Shop now</a>
                                       </div>
                                     </div>`;
   }
 }
-/* export function renderSearchProducts(filter) {
-  const productsContainer = document.querySelector(".container__products");
-  
-  productsContainer.innerHTML = "";
-  
-  filter.forEach(function (prod) {
-    productsContainer.innerHTML += `<div class="content__product product__list">
-                                    <a href="prodDetails.html?id=${prod.data.id}">
-                                      <img src=${prod.data.attributes.image_url} class="product__img" alt="#" />
-                                    </a>   
-                                    <div class="product__info">
-                                      <h3 class="product__info--title">${prod.data.attributes.title}</h3>
-                                      <p class="product__info--price">${prod.data.attributes.price} $</p>
-                                      <a href="prodDetails.html?id=${prod.data.id}" class="product__btn cta">Shop now</a>
-                                    </div>
-                                  </div>`;
-  });
-} */
-
-/*   products.forEach(function (product) {
-  productsContainer.innerHTML += `<div class="content__product product__list">
-                                    <a href="prodDetails.html?id=${product.id}">
-                                      <img src=http://localhost:1337${product.image.formats.medium.url} class="product__img" alt="${product.image.alternativeText}" />
-                                    </a>   
-                                    <div class="product__info">
-                                      <h3 class="product__info--title">${product.title}</h3>
-                                      <p class="product__info--price">${product.price} $</p>
-                                      <a href="prodDetails.html?id=${product.id}" class="product__btn cta">Shop now</a>
-                                    </div>
-                                  </div>`;
-}); */
