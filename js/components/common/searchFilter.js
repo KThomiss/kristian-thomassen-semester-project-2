@@ -1,4 +1,5 @@
 import { fetchProducts } from "../fetchProducts.js";
+/* import { renderSearchProducts } from "../fetchProducts.js"; */
 
 export function searchFilter(products) {
   const filterInput = document.querySelector("#search");
@@ -15,6 +16,7 @@ export function searchFilter(products) {
       }
     });
     fetchProducts(filteredProducts);
+    /* renderSearchProducts(filteredProducts); */
 
     if (filteredProducts.length === 0) {
       productsContainer.innerHTML = `<div class="message">No results</div>`;

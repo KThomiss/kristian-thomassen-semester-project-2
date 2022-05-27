@@ -28,13 +28,13 @@ function editProducts(products) {
                                     </div>
                                   </a>`;
   }
-  /*   products.forEach(function (product) {
-    productsContainer.innerHTML += `<a href="editForm.html?id=${product.id}" class="edit__link" aria-label="icon for editing product">
-                                      <div class="container__products--edit">
-                                        <p class="edit__id">Id: ${product.id}</p>
-                                        <p class="edit__title">${product.title}</p>
-                                        <i class="fa-solid fa-pen-to-square"></i>
-                                      </div>
-                                    </a>`;
-  }); */
 }
+/*   products.forEach(function (product) {
+  productsContainer.innerHTML += `<a href="editForm.html?id=${product.id}" class="edit__link" aria-label="icon for editing product">
+                                    <div class="container__products--edit">
+                                      <p class="edit__id">Id: ${product.id}</p>
+                                      <p class="edit__title">${product.title}</p>
+                                      <i class="fa-solid fa-pen-to-square"></i>
+                                    </div>
+                                  </a>`;
+}); */

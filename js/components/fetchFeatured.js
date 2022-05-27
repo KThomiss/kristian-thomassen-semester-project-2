@@ -32,17 +32,16 @@ function fetchFeatured(featured) {
                                       </div>`;
     }
   }
-
-  /*   featured.forEach(function (feature) {
-    featuredContainer.innerHTML += `<div class="content__product product__featured">
-                                      <a href="prodDetails.html?id=${feature.data.id}">
-                                        <img src=http://localhost:1337${feature.image.formats.small.url} class="product__img featured__img" alt="${feature.image.alternativeText}" />
-                                      </a>
-                                      <div class="product__info">
-                                        <h3>${feature.data.attributes.title}</h3>
-                                        <p>${feature.data.attributes.price} $</p>
-                                        <a href="prodDetails.html?id=${feature.data.id}" class="product__btn cta">Shop now</a>
-                                      </div>
-                                    </div>`;
-  }); */
 }
+/*   featured.forEach(function (feature) {
+  featuredContainer.innerHTML += `<div class="content__product product__featured">
+                                    <a href="prodDetails.html?id=${feature.data.id}">
+                                      <img src=http://localhost:1337${feature.image.formats.small.url} class="product__img featured__img" alt="${feature.image.alternativeText}" />
+                                    </a>
+                                    <div class="product__info">
+                                      <h3>${feature.data.attributes.title}</h3>
+                                      <p>${feature.data.attributes.price} $</p>
+                                      <a href="prodDetails.html?id=${feature.data.id}" class="product__btn cta">Shop now</a>
+                                    </div>
+                                  </div>`;
+}); */

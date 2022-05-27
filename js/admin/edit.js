@@ -95,13 +95,12 @@ async function updateProduct(title, price, description, featured, id) {
     const json = await response.json();
     console.log(json);
 
-    if (json.data.attributes.updated_at) {
+    if (json.data.attributes.updatedAt) {
       displayMessage("success", "Product updated", ".container__message");
     }
 
-    if (json.error) {
-      displayMessage("error", json.message, ".container__message");
-      redirect();
+    if (json.data.error) {
+      displayMessage("error", json.error.message, ".container__message");
     }
   } catch (error) {
     console.log(error);

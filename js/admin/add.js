@@ -25,7 +25,7 @@ function submitForm(event) {
   const descriptionValue = description.value.trim();
   const featuredValue = featured.checked;
 
-  if (titleValue.lengt === 0 || priceValue.length === 0 || isNaN(priceValue) || descriptionValue.length === 0) {
+  if (titleValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || descriptionValue.length === 0) {
     return displayMessage("warning", "Please apply proper values", ".container__message");
   }
   addProduct(titleValue, priceValue, descriptionValue, featuredValue);
@@ -64,14 +64,14 @@ async function addProduct(title, price, description, featured) {
     const response = await fetch(adminUrl, options);
     const json = await response.json();
 
-    console.log(json);
+    console.log(json.data);
 
-    if (json.created_at) {
+    if (json.data.attributes.createdAt) {
       displayMessage("success", "Product created", ".container__message");
       form.reset();
     }
 
-    if (json.error) {
+    if (json.data.error) {
       displayMessage("error", json.message, ".container__message");
     }
   } catch (error) {
