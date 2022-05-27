@@ -12,7 +12,6 @@ const products = apiUrl + "products/";
     const json = await response.json();
 
     fetchProducts(json);
-    /* renderSearchProducts(); */
     searchFilter(json);
   } catch (error) {
     console.log(error);
@@ -25,6 +24,10 @@ export function fetchProducts(products) {
   productsContainer.innerHTML = "";
 
   const productsArray = products.data;
+
+  if (productsArray === undefined) {
+    return false;
+  }
 
   for (let i = 0; i < productsArray.length; i++) {
     productsContainer.innerHTML += `<div class="content__product product__list">
@@ -39,12 +42,11 @@ export function fetchProducts(products) {
                                     </div>`;
   }
 }
-
 /* export function renderSearchProducts(filter) {
   const productsContainer = document.querySelector(".container__products");
-
+  
   productsContainer.innerHTML = "";
-
+  
   filter.forEach(function (prod) {
     productsContainer.innerHTML += `<div class="content__product product__list">
                                     <a href="prodDetails.html?id=${prod.data.id}">

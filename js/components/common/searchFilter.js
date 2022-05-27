@@ -1,11 +1,12 @@
 import { fetchProducts } from "../fetchProducts.js";
-/* import { renderSearchProducts } from "../fetchProducts.js"; */
 
 export function searchFilter(products) {
   const filterInput = document.querySelector("#search");
   const productsContainer = document.querySelector(".container__products");
+  console.log(products);
 
   function inputValue(event) {
+    /* console.log(products); */
     const inputValue = event.target.value.trim().toLowerCase();
 
     const prodArray = products.data;
@@ -15,8 +16,9 @@ export function searchFilter(products) {
         return true;
       }
     });
+    /* console.log(filteredProducts); */
+    /* console.log(typeof filteredProducts); */
     fetchProducts(filteredProducts);
-    /* renderSearchProducts(filteredProducts); */
 
     if (filteredProducts.length === 0) {
       productsContainer.innerHTML = `<div class="message">No results</div>`;
