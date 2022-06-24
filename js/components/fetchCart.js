@@ -1,6 +1,6 @@
 import createMenu from "../components/common/createMenu.js";
 import { addToCart, getFromCart } from "../storage/storage.js";
-import { shopCartCounter } from "../components/common/mobileMenu.js";
+import shopCartCounter from "../components/common/mobileMenu.js";
 
 createMenu();
 
@@ -80,4 +80,5 @@ clearAllBtn.addEventListener("click", function () {
   clearAllBtn.style.display = "none";
   cartContainer.innerHTML = `<div class="message">Your shopping cart is empty.<div>`;
   priceContainer.innerHTML = "";
+  shopCartCounter();
 });

@@ -1,7 +1,7 @@
 import createMenu from "../components/common/createMenu.js";
 import { apiUrl } from "../utils/api.js";
 import { addToCart, getFromCart } from "../storage/storage.js";
-import { shopCartCounter } from "../components/common/mobileMenu.js";
+import shopCartCounter from "../components/common/mobileMenu.js";
 
 createMenu();
 

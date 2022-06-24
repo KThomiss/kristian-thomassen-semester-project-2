@@ -10,7 +10,7 @@ dropdownBtn.addEventListener("click", function () {
 
 createMenu();
 
-export function shopCartCounter() {
+export default function shopCartCounter() {
   const counter = document.querySelectorAll(".shopping__cart--counter");
   for (let i = 0; i < counter.length; i++) {
     const itemsInCart = getFromCart();
