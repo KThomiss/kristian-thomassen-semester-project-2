@@ -18,6 +18,8 @@ export default function shopCartCounter() {
 
     if (itemsInCart.length === 0) {
       counter[i].style.display = "none";
+    } else {
+      counter[i].style.display = "block";
     }
   }
 }

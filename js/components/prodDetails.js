@@ -41,7 +41,7 @@ async function getProductId() {
   const shoppingCart = getFromCart();
 
   const findInCart = shoppingCart.find(function (product) {
-    return parseInt(product.id) === json.id;
+    return parseInt(product.id) === json.data.id;
   });
 
   if (!findInCart) {
