@@ -64,4 +64,20 @@
 
 .fa-cart-shopping {
   color: #535353;
+  position: relative;
+}
+
+.shopping__cart--counter {
+  font-size: 11px;
+  width: 17px;
+  height: 17px;
+  border-radius: $border-radius;
+  text-align: center;
+  line-height: 1.55;
+
+  position: absolute;
+  top: -11px;
+  left: 11px;
+  background-color: map-get($colors, ctaPrimary);
+  color: black;
 }

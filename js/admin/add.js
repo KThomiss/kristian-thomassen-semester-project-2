@@ -64,7 +64,7 @@ async function addProduct(title, price, description, featured) {
     const response = await fetch(adminUrl, options);
     const json = await response.json();
 
-    console.log(json.data);
+    console.log(json);
 
     if (json.data.attributes.createdAt) {
       displayMessage("success", "Product created", ".container__message");

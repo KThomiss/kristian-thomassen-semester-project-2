@@ -1,5 +1,6 @@
 import createMenu from "../components/common/createMenu.js";
 import { addToCart, getFromCart } from "../storage/storage.js";
+import { shopCartCounter } from "../components/common/mobileMenu.js";
 
 createMenu();
 
@@ -70,6 +71,7 @@ function removeProduct() {
     addToCart(newShopCart);
     fetchCart(newShopCart);
     sumPriceOfCart();
+    shopCartCounter();
   }
 }
 

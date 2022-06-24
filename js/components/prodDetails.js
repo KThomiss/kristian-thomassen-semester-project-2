@@ -1,6 +1,7 @@
 import createMenu from "../components/common/createMenu.js";
 import { apiUrl } from "../utils/api.js";
 import { addToCart, getFromCart } from "../storage/storage.js";
+import { shopCartCounter } from "../components/common/mobileMenu.js";
 
 createMenu();
 
@@ -99,20 +100,5 @@ function handleStorage() {
     });
     addToCart(newShopCart);
   }
+  shopCartCounter();
 }
-
-//Localhost
-/*   detailsContainer.innerHTML += `<div class="product__details">
-                                  <div class="details__container--img">
-                                    <img src=http://localhost:1337${json.image.formats.medium.url} class="product__img details__img" alt="${json.image.alternativeText}" />
-                                  </div>
-                                  <div class="details__container--info">
-                                    <h2 class="details__title">${json.title}</h2>
-                                    <p class="details__description">${json.description}</p>
-                                    <p><span class="details__span--bold">Price:</span> ${json.price} $</p>
-                                    <div class="details__container--cta">
-                                      <button class="cta details__cta" id="cart__btn" data-id="${json.id}" data-title="${json.title}" data-price="${json.price}" data-img="http://localhost:1337${json.image.formats.small.url}">Add to Cart</button>
-                                      <a href="shoppingCart.html" class="product__btn cta details__cta">Cart</a>
-                                    </div>
-                                  </div>
-                                </div>`; */
