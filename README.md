@@ -1,6 +1,6 @@
 # KTBlog
 
-![image](ktblog_home.jpg)
+![image](allez-products-small.png)
 
 This is a website I developed for my exam at the end of the first year at Noroff.
 All the blog posts are fetched from Wordpress headless CMS
