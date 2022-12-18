@@ -10,7 +10,8 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 
 const id = params.get("id");
-const queryUrl = apiUrl + "products/" + id;
+const queryUrl = apiUrl + "products/" + id + "?populate=*";
+console.log(queryUrl);
 
 const detailsContainer = document.querySelector(".container__details");
 
@@ -19,17 +20,18 @@ detailsContainer.innerHTML = "";
 async function getProductId() {
   const response = await fetch(queryUrl);
   const json = await response.json();
+  console.log(json.data);
 
   detailsContainer.innerHTML += `<div class="product__details">
                                   <div class="details__container--img">
-                                    <img src=${json.data.attributes.image_url} class="product__img details__img" alt="#" />
+                                    <img src=${json.data.attributes.image.data.attributes.url} class="product__img details__img" alt="#" />
                                   </div>
                                   <div class="details__container--info">
                                     <h2 class="details__title">${json.data.attributes.title}</h2>
                                     <p class="details__description">${json.data.attributes.description}</p>
                                     <p><span class="details__span--bold">Price:</span> ${json.data.attributes.price} $</p>
                                     <div class="details__container--cta">
-                                      <button class="cta details__cta" id="cart__btn" data-id="${json.data.id}" data-title="${json.data.attributes.title}" data-price="${json.data.attributes.price}" data-img="${json.data.attributes.image_url}">Add to Cart</button>
+                                      <button class="cta details__cta" id="cart__btn" data-id="${json.data.id}" data-title="${json.data.attributes.title}" data-price="${json.data.attributes.price}" data-img="${json.data.attributes.image.data.attributes.url}">Add to Cart</button>
                                       <a href="shoppingCart.html" class="product__btn cta details__cta">Cart</a>
                                     </div>
                                   </div>

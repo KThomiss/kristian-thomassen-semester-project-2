@@ -1,6 +1,6 @@
 import { apiUrl } from "../utils/api.js";
 
-const featured = apiUrl + "products/"; //?featured=true
+const featured = apiUrl + "products?populate=*";
 
 (async function () {
   try {
@@ -22,7 +22,7 @@ function fetchFeatured(featured) {
     if (featured.data[i].attributes.featured === true) {
       featuredContainer.innerHTML += `<div class="content__product product__featured">
                                         <a href="prodDetails.html?id=${featured.data[i].id}">
-                                          <img src=${featured.data[i].attributes.image_url} class="product__img featured__img" alt="#" />
+                                          <img src=${featured.data[i].attributes.image.data.attributes.url} class="product__img featured__img" alt="#" />
                                         </a>
                                         <div class="product__info">
                                           <h3>${featured.data[i].attributes.title}</h3>
@@ -33,15 +33,3 @@ function fetchFeatured(featured) {
     }
   }
 }
-/*   featured.forEach(function (feature) {
-  featuredContainer.innerHTML += `<div class="content__product product__featured">
-                                    <a href="prodDetails.html?id=${feature.data.id}">
-                                      <img src=http://localhost:1337${feature.image.formats.small.url} class="product__img featured__img" alt="${feature.image.alternativeText}" />
-                                    </a>
-                                    <div class="product__info">
-                                      <h3>${feature.data.attributes.title}</h3>
-                                      <p>${feature.data.attributes.price} $</p>
-                                      <a href="prodDetails.html?id=${feature.data.id}" class="product__btn cta">Shop now</a>
-                                    </div>
-                                  </div>`;
-}); */

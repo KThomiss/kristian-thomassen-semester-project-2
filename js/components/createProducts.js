@@ -10,7 +10,7 @@ export function createProducts(products) {
   for (let i = 0; i < products.length; i++) {
     productsContainer.innerHTML += `<div class="content__product product__list">
                                       <a href="prodDetails.html?id=${products[i].id}">
-                                        <img src=${products[i].attributes.image_url} class="product__img" alt="#" />
+                                        <img src=${products[i].attributes.image.data.attributes.url} class="product__img" alt="#" />
                                       </a>   
                                       <div class="product__info">
                                         <h3 class="product__info--title">${products[i].attributes.title}</h3>
@@ -20,3 +20,5 @@ export function createProducts(products) {
                                     </div>`;
   }
 }
+
+/*<img src=${products[i].attributes.image_url} class="product__img" alt="#" />*/
