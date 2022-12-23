@@ -10,7 +10,7 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
-const queryUrl = apiUrl + "products/" + id;
+const queryUrl = apiUrl + "products/" + id + "?populate=*";
 
 const form = document.querySelector(".form__edit");
 const title = document.querySelector("#title");
@@ -21,6 +21,7 @@ const imageFile = document.querySelector("#imageFile");
 const idInput = document.querySelector("#id");
 const message = document.querySelector(".container__message");
 const featuredMessage = document.querySelector(".product__isFeatured");
+const editImageShowcase = document.querySelector(".edit__image--showcase");
 
 (async function () {
   try {
@@ -32,6 +33,9 @@ const featuredMessage = document.querySelector(".product__isFeatured");
     description.value = details.data.attributes.description;
     featured.value = details.data.attributes.featured;
     idInput.value = details.data.id;
+    const isImage = details.data.attributes.image.data.attributes.url;
+
+    editImageShowcase.style.backgroundImage = `url(${isImage})`;
 
     featured.addEventListener("click", function () {
       if (featured.value === "true") {
@@ -77,7 +81,9 @@ async function updateProduct(title, price, description, featured, id) {
     featured: featured,
   };
 
-  formData.append("files.image", file, file.name);
+  if (editImageShowcase === null || undefined) {
+    formData.append("files.image", file, file.name);
+  }
   formData.append("data", JSON.stringify(data));
 
   const token = getToken();
