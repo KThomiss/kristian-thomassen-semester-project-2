@@ -77,6 +77,28 @@ textarea {
   margin-top: 0;
 }
 
+.label__types {
+  display: inline-block;
+}
+
+legend {
+  background-color: whitesmoke;
+  padding: 10px;
+}
+
+fieldset {
+  border: $header-border;
+}
+
+input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+}
+
+input[type="checkbox"]:checked {
+  accent-color: map-get($colors, ctaSecondary);
+}
+
 @media (max-width: 450px) {
   .form__login {
     min-width: 280px;

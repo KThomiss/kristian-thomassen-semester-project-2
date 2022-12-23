@@ -30,6 +30,15 @@
   h3 {
     margin-bottom: 10px;
   }
+
+  .product__info--title {
+    margin-bottom: 0;
+  }
+
+  span {
+    color: #6b6b6b;
+    text-transform: capitalize;
+  }
 }
 
 .product__img {
