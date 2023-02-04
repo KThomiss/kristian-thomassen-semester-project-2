@@ -2,12 +2,11 @@
 
 ![image](allez-products-small.png)
 
-This is a website I developed for my exam at the end of the first year at Noroff.
-All the blog posts are fetched from Wordpress headless CMS
+This is a website I developed in the second year as a Project delivery at Noroff.
 
 ## Description
 
-KTBlog is a blog site directed towards coders where they can read about everything that take parts in the coding world, wheter it might be tips & tricks, helpful information or other peoples story of becoming a developer.
+Allez is an e-commerce website for shoes.
 ###Project Requirements:
 
 #### Home page
@@ -41,7 +40,7 @@ KTBlog is a blog site directed towards coders where they can read about everythi
 - Structured with HTML
 - All functionality is created in vanilla JS.
 - Styling is done with CSS
-- Wordpress is used as Headless CMS.
+- Strapi API for the products.
 - Designed in Adobe XD
 
 ## Getting Started
