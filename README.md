@@ -8,7 +8,7 @@ This is a website I developed in the second year as a Project delivery at Noroff
 
 Allez is an e-commerce website for shoes.
 
-####Project Requirements:
+### Project Requirements:
 
 #### Home page
 - Hero banner with an image that is uploaded to Strapi.
